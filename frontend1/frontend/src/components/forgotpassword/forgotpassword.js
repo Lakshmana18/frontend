@@ -8,7 +8,6 @@ import {
   VStack,
   Heading,
   Text,
-  FormHelperText,
 } from '@chakra-ui/react';
 import axios from 'axios';
 import { api } from '../axios/api';
@@ -27,7 +26,7 @@ export const ForgotPassword = () => {
 
     setIsSubmitting(true);
 
-    await axios.post(api + "/resetpassword", { email, newPassword })
+    await axios.post(api + "/resetpassword", { email, newPassword, confirmPassword })
       .then((res) => {
         alert(res.data.message);
       })
@@ -67,7 +66,6 @@ export const ForgotPassword = () => {
             focusBorderColor="teal.500"
             _placeholder={{ color: 'gray.400' }}
           />
-          <FormHelperText></FormHelperText>
         </FormControl>
 
         <FormControl id="new-password" isRequired>
@@ -108,4 +106,5 @@ export const ForgotPassword = () => {
     </Box>
   );
 };
+
 
