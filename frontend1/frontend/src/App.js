@@ -5,7 +5,8 @@ import HydrationCalculator from './components/calculate/HydrationCalculator.js';
 import MacronutrientCalculator from './components/calculate/MacronutrientCalculator.js';
 import { ForgotPassword } from './components/forgotpassword/forgotpassword';
 import NutritionInfoPage from './components/nutrition/NutritionInfoPage.js';
-import { Profile } from './components/profile/Profile.js';
+import { Profile } from './components/profile/ProfilePage.js';
+
 import { SignIn } from './components/signin/signin';
 import SignOutForm from './components/signout/signout.js';
 import { SignUp } from './components/signup/signup';
@@ -25,7 +26,7 @@ function App() {
           <Route path='/calci2' element={<MacronutrientCalculator/>} />
           <Route path='/calci3' element={<HydrationCalculator/>} />
           <Route path='/nutrion' element={<NutritionInfoPage/>} />
-          <Route path='/prof' element={<Profile/>} />
+          <Route path='/profile' element={<Profile/>} />
           <Route path='/addmeal' element={<HomePage/>} />
 
         </Routes>
